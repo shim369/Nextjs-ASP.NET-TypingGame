@@ -1,0 +1,18 @@
+.typeBox {
+    background: #000;
+    color: #fff;
+    padding: 40px;
+    max-width: 400px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.currentWord {
+    margin-bottom: 10px;
+}
+
+.startGame {
+    margin-bottom: 20px;
+}

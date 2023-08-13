@@ -15,10 +15,19 @@ namespace TypingGameAPI.Controllers
         
         private static readonly Random Random = new Random();
 
+
+        private static string LastWord = "";
+
         [HttpGet("getword")]
         public IActionResult GetWord()
         {
-            var word = Words[Random.Next(Words.Count)];
+            string word;
+            do
+            {
+                word = Words[Random.Next(Words.Count)];
+            } while (word == LastWord);
+
+            LastWord = word;
             return Ok(new { word = word });
         }
 
